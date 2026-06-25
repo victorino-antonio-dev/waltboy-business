@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "preview": "npx serve@latest out",
+    "deploy:cloudflare": "pnpm build && wrangler pages deploy out --project-name=waltboy-business --branch=main",
     "lint": "next lint"
   },
   "dependencies": {

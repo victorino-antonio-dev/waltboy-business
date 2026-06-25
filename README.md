@@ -26,6 +26,21 @@ Configuracao recomendada:
 - Build output directory: `out`
 - Node.js version: `22`
 
+Deploy via Wrangler:
+
+```bash
+pnpm build
+pnpm dlx wrangler@latest pages deploy out --project-name=waltboy-business --branch=main
+```
+
+O dominio automatico esperado da Cloudflare Pages sera:
+
+```text
+https://waltboy-business.pages.dev
+```
+
+Para usar um dominio proprio, adiciona-o em Cloudflare Pages > Custom domains depois do primeiro deploy. Um endereco como `www.waltboybusiness.dev.app` so funciona se tiveres controlo desse dominio/subdominio e conseguires configurar o DNS.
+
 Se usares Google Analytics, cria a variavel:
 
 ```text
