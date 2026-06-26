@@ -26,12 +26,9 @@ Configuracao recomendada:
 - Build output directory: `out`
 - Node.js version: `22`
 
-Deploy via Wrangler:
+Nao uses `wrangler pages deploy` no Build command de um projeto ligado ao GitHub. O Cloudflare Pages faz o deploy automaticamente depois de gerar a pasta `out`.
 
-```bash
-pnpm build
-pnpm dlx wrangler@latest pages deploy out --project-name=waltboy-business --branch=main
-```
+No painel da Cloudflare, deixa qualquer campo de deploy manual/command vazio se aparecer. Usa apenas o Build command acima.
 
 O dominio automatico esperado da Cloudflare Pages sera:
 
